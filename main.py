@@ -5,6 +5,14 @@ def cadastrar():
     pessoas.append({"nome": nome})
     print("Pessoa cadastrada com sucesso!")
 
+def listar():
+    if len(pessoas) == 0:
+        print("Nenhuma pessoa cadastrada ainda.")
+    else:
+        print("\n--- Lista de Pessoas ---")
+        for indice, pessoa in enumerate(pessoas):
+            print(f"[{indice}] Nome: {pessoa['nome']}")
+
 def menu():
     while True:
         print("\n--- Sistema de Gestão de Pessoas ---")
@@ -16,11 +24,13 @@ def menu():
         
         if opcao == '1':
             cadastrar()
+        elif opcao == '2':
+            listar()
         elif opcao == '3':
             print("Encerrando...")
             break
         else:
-            print("Funcionalidade em desenvolvimento...")
+            print("Opção inválida, tente novamente.")
 
 if __name__ == "__main__":
     menu()
