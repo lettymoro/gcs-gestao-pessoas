@@ -1,5 +1,10 @@
 pessoas = []
 
+def cadastrar():
+    nome = input("Digite o nome da pessoa: ")
+    pessoas.append({"nome": nome})
+    print("Pessoa cadastrada com sucesso!")
+
 def menu():
     while True:
         print("\n--- Sistema de Gestão de Pessoas ---")
@@ -9,7 +14,9 @@ def menu():
         
         opcao = input("Escolha uma opção: ")
         
-        if opcao == '3':
+        if opcao == '1':
+            cadastrar()
+        elif opcao == '3':
             print("Encerrando...")
             break
         else:
