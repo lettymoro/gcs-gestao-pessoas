@@ -25,13 +25,30 @@ def buscar():
     if not encontrado:
         print("Ninguém encontrado com esse nome.")
 
+def atualizar():
+    listar()
+    if len(pessoas) > 0:
+        indice_str = input("Digite o número (entre colchetes) da pessoa que deseja atualizar: ")
+        
+        if indice_str.isdigit():
+            indice = int(indice_str)
+            if 0 <= indice < len(pessoas):
+                novo_nome = input("Digite o novo nome: ")
+                pessoas[indice]['nome'] = novo_nome
+                print("Nome atualizado com sucesso!")
+            else:
+                print("Número não encontrado na lista.")
+        else:
+            print("Por favor, digite apenas números.")
+
 def menu():
     while True:
         print("\n--- Sistema de Gestão de Pessoas ---")
         print("1. Cadastrar pessoa")
         print("2. Listar pessoas")
         print("3. Buscar pessoa")
-        print("4. Sair")
+        print("4. Atualizar pessoa")
+        print("5. Sair")
         
         opcao = input("Escolha uma opção: ")
         
@@ -42,6 +59,8 @@ def menu():
         elif opcao == '3':
             buscar()
         elif opcao == '4':
+            atualizar()
+        elif opcao == '5':
             print("Encerrando...")
             break
         else:
