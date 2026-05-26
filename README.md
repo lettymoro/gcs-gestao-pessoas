@@ -148,6 +148,8 @@ Para visualizar o histórico evolutivo do projeto:
 ```bash
 git log --oneline --graph --decorate --all
 ```
+### Histórico Evolutivo do Repositório:
+![Gráfico do Histórico Git](imagens/historico.PNG)
 
 Esse comando mostra commits, branches, merges e tags, permitindo acompanhar a evolução do sistema.
 
@@ -212,6 +214,11 @@ Tela inicial esperada:
 6. Sair
 Escolha uma opção:
 ```
+### Menu Interativo no Terminal:
+![Menu do Sistema](imagens/menu.PNG)
+
+### Evidência de Execução Completa:
+![Sistema em Execução (Cadastro e Listagem)](imagens/cadastro.PNG)
 
 ## 9. Explicação resumida das funcionalidades implementadas
 Cadastro de pessoas
